@@ -1,22 +1,26 @@
-from flask import Flask, render_template, flash, redirect, url_for, request, session, jsonify
-from flask_pymongo import PyMongo
-from flask_bcrypt import Bcrypt
-import numpy as np
-import cv2
-import base64
-import checker
-import tracker
-import tensorflow as tf
-import matplotlib.pyplot as plt
-import face_recognition
-import io, os
-from PIL import Image
-from PIL import Image
-from io import BytesIO
-import mediapipe as mp
-import faceDetector
-import ssl
-
+try:
+    from flask import Flask, render_template, flash, redirect, url_for, request, session, jsonify
+    from flask_pymongo import PyMongo
+    from flask_bcrypt import Bcrypt
+    import numpy as np
+    import cv2
+    import base64
+    import checker
+    import tracker
+    import tensorflow as tf
+    import matplotlib.pyplot as plt
+    import face_recognition
+    import io, os
+    from PIL import Image
+    from PIL import Image
+    from io import BytesIO
+    import mediapipe as mp
+    import faceDetector
+    import ssl
+    
+except ImportError:
+    from os import system
+    system('pip install flask flask_pymong flask_bcrypt numpy opencv-python matplotlib face_recognition pillow mediapipe facedetector ssl')
 
 app = Flask(__name__, static_url_path='/static')
 # Create an SSL context
