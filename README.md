@@ -1,1 +1,4 @@
-# web-facial-authentication
+# Facial-authentication web app
+
+## Usage:
+    python app.py
